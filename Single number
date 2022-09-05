@@ -1,0 +1,13 @@
+class Solution(object):
+    def singleNumber(self, nums):
+        nlist=[]
+        nums.sort()
+        for i in range(len(nums)-1):
+            if nums[i]==nums[i+1]:
+                nlist.append(nums[i])
+        for j in nums:
+            if j not in nlist:
+                return j
+         
+                
+        
