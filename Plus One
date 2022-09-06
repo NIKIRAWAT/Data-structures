@@ -1,0 +1,14 @@
+class Solution(object):
+    def plusOne(self, digits):
+        s=0
+        p=len(digits)
+        for i in range (len(digits)):
+            p-=1
+            if p>=0:
+                s=s+digits[i]*(10**p)
+                
+        n=s+1
+        res = [int(x) for x in str(n)]
+        return res
+     
+        
