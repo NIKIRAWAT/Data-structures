@@ -1,0 +1,22 @@
+class Solution(object):
+    def myAtoi(self, s):
+        integer=""
+        for i in range(len(s)):
+            if s[i] !=' ' and s[i]!='+' and s[i] !='-' and not s[i].isdigit():
+                return 0
+            if s[i]=='+' or s[i]=='-' or s[i].isdigit():
+                integer+=s[i]
+                j=i+1
+                while j<len(s) and s[j].isdigit():
+                    integer+=s[j]
+                    j+=1
+                break
+        if not integer or integer=='+' or integer=='-':
+            return 0
+        integer=int(integer)
+        if integer>2**31-1:
+            return 2**31-1
+        elif integer<-2**31:
+            return -2**31
+        else:
+            return integer
