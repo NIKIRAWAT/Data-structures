@@ -1,4 +1,4 @@
-# Data-structures
+# Data-structures Leetcode Solutions
 this repository contains the solutions to the different DSA Problems
 I have Started with the Leetcode..
 
